@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic&display=swap&_v=20221122224610" rel="stylesheet" />
+	<link rel="stylesheet" href="css/main.css?_v=20221122224610">
+	<title>Form</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="#" class="header__logo">
+					<img src="img/header/logo.svg" alt="Logo">
+				</a>
+				<nav class="header__menu menu">
+					<ul class="menu__list">
+						<li class="menu__item">
+							<a href="#" class="menu__link">
+								About Us
+							</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">
+								Courses
+							</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">
+								Events
+							</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">
+								Blog
+							</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">
+								Contacts
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="header__actions actions-header">
+					<a href="#" class="actions-header__btn">
+						<span>Get consultation</span>
+					</a>
+					<a href="#" class="actions-header__auth">
+						Log in / Register
+					</a>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="questions">
+				<div class="questions__container">
+					<div class="questions__body">
+						<div class="questions__image">
+							<img src="img/questions/illustration.svg" alt="illustration">
+						</div>
+						<div class="questions__content content-questions">
+							<div class="content-questions__header">
+								<div class="content-questions__label">
+									Any questions?
+								</div>
+								<h2 class="content-questions__title">
+									Drop us a line
+								</h2>
+							</div>
+							<form action="https://jsonplaceholder.typicode.com/posts" method="post" class="content-questions__form form-questions">
+								<div class="form-questions__line">
+									<div class="form-questions__field">
+										<label class="form-questions__label label" for="firstname">
+											First Name*
+										</label>
+										<input autocomplete="on" id="firstname" type="text" name="firstname" placeholder="Your first name" class="form-questions__input" required>
+									</div>
+									<div class="form-questions__field">
+										<label class="form-questions__label label" for="lastname">
+											Last Name*
+										</label>
+										<input autocomplete="on" id="lastname" type="text" name="lastname" placeholder="Your last name" class="form-questions__input" required>
+									</div>
+								</div>
+								<div class="form-questions__line">
+									<div class="form-questions__field">
+										<label class="form-questions__label label" for="email">
+											Email*
+										</label>
+										<input autocomplete="off" id="email" type="email" name="email" placeholder="Your working email" class="form-questions__input" required>
+									</div>
+									<div class="form-questions__field">
+										<label class="form-questions__label label" for="phone">
+											Phone
+										</label>
+										<input autocomplete="off" id="phone" type="email" name="phone" placeholder="Your phone number" class="form-questions__input" required>
+									</div>
+								</div>
+								<div class="form-questions__message">
+									<label class="form-questions__label label" for="message">
+										Message*
+									</label>
+									<textarea id="message" autocomplete="off" name="message" placeholder="Your message" class="form-questions__textarea">
+                                        </textarea>
+								</div>
+								<div class="form-questions__footer footer-form">
+									<div class="footer-form__check">
+										<input checked type="checkbox" name="agree" id="agree" class="footer-form__checkbox" required>
+										<label for="agree" class="footer-form__label label">
+											I agree to receive communications from Createx Online School
+										</label>
+									</div>
+									<button type="submit" class="footer-form__button">
+										Send message
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+
+		</footer>
+	</div>
+
+</body>
+<style>
+	/* Reset and base styles  */
+	* {
+		padding: 0px;
+		margin: 0px;
+		border: none;
+	}
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	html,
+	body {
+		height: 100%;
+	}
+
+	/* Links */
+
+	a,
+	a:link,
+	a:visited {
+		/* color: inherit; */
+		text-decoration: none;
+		/* display: inline-block; */
+	}
+
+	a:hover {
+		/* color: inherit; */
+		text-decoration: none;
+	}
+
+	/* Common */
+
+	aside,
+	nav,
+	footer,
+	header,
+	section,
+	main {
+		display: block;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		font-size: inherit;
+		font-weight: inherit;
+	}
+
+	ul,
+	ul li {
+		list-style: none;
+	}
+
+	img {
+		vertical-align: top;
+	}
+
+	img,
+	svg {
+		max-width: 100%;
+		height: auto;
+	}
+
+	/* Form */
+
+	input,
+	textarea,
+	button,
+	select {
+		font-family: inherit;
+		font-size: inherit;
+		color: inherit;
+		background-color: transparent;
+	}
+
+	input::-ms-clear {
+		display: none;
+	}
+
+	button,
+	input[type="submit"] {
+		display: inline-block;
+		box-shadow: none;
+		background-color: transparent;
+		background: none;
+		cursor: pointer;
+	}
+
+	input:focus,
+	input:active,
+	button:focus,
+	button:active {
+		outline: none;
+	}
+
+	button::-moz-focus-inner {
+		padding: 0;
+		border: 0;
+	}
+
+	label {
+		cursor: pointer;
+	}
+
+	legend {
+		display: block;
+	}
+
+	body {
+		line-height: 1;
+		font-family: 'Lato';
+		color: #424551;
+		line-height: 160%;
+	}
+
+	/* ================================ */
+	.wrapper {
+		min-height: 100%;
+		overflow: hidden;
+		display: flex;
+		position: relative;
+		flex-direction: column;
+	}
+
+	/* ================================ */
+
+	.wrapper>main {
+		flex: 1 1 auto;
+	}
+
+	/* ================================ */
+	[class*="__container"] {
+		max-width: 1260px;
+		margin: 0 auto;
+		padding: 0px 15px;
+	}
+
+	/* ================================ */
+	/* ================================ */
+	.header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding: 20px 0;
+		z-index: 50;
+		background-color: #FFFFFF;
+		box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+		border-radius: 4px;
+	}
+
+	.header__container {
+		display: flex;
+		align-items: center;
+		gap: 60px;
+	}
+
+	.header__logo {
+		flex: 0 0 130px;
+	}
+
+	.header__menu {
+		flex-grow: 1;
+	}
+
+	.header__actions {}
+
+	.menu {}
+
+	.menu__list {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 40px;
+		row-gap: 10px;
+	}
+
+	.menu__item {}
+
+	.menu__link {
+		font-weight: 700;
+		transition: all 0.3s ease;
+		color: #424551;
+	}
+
+	.menu__link:hover {
+		color: #FF3F3A;
+	}
+
+	.actions-header {
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		gap: 36px;
+		flex-wrap: wrap;
+	}
+
+	.actions-header__btn {
+		font-weight: 700;
+		line-height: 1.25;
+		text-align: center;
+		letter-spacing: 0.5px;
+		color: #FFFFFF;
+		padding: 16px 40px;
+		background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+		border-radius: 4px;
+		transition: all 0.3s ease;
+	}
+
+	.actions-header__btn:hover {
+		background: linear-gradient(55.95deg, #ea231c 0%, #d75509 100%);
+	}
+
+	.actions-header__auth {
+		background: url('img/header/Profile.svg') left no-repeat;
+		padding-left: 24px;
+		font-weight: 700;
+		line-height: 1.25;
+		color: #424551;
+		transition: all 0.3s ease;
+	}
+
+	.actions-header__auth:hover {
+		color: #FF3F3A;
+	}
+
+	.questions {
+		padding: 240px 0px 100px 0px;
+	}
+
+	.questions__container {}
+
+	.questions__body {
+		display: flex;
+		justify-content: center;
+		column-gap: 90px;
+		row-gap: 50px;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.questions__image {
+		flex: 1 0 435px;
+	}
+
+	.questions__image img {
+		max-width: 100%;
+	}
+
+	.questions__content {}
+
+	.content-questions {
+		flex: 0 1 705px;
+	}
+
+	.content-questions__header {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 40px;
+		color: #1E212C;
+	}
+
+	.content-questions__label {
+		font-weight: 700;
+		line-height: 150%;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+
+	.content-questions__label:not(:last-child) {
+		margin-bottom: 8px;
+	}
+
+	.content-questions__title {
+		font-weight: 900;
+		font-size: 46px;
+		line-height: 130%;
+	}
+
+	.content-questions__form {}
+
+	.form-questions {
+		display: flex;
+		flex-direction: column;
+		row-gap: 24px;
+	}
+
+	.form-questions__line {
+		display: flex;
+		flex: 1 1 auto;
+		column-gap: 25px;
+		justify-content: space-between;
+	}
+
+	.form-questions__field {
+		flex: 1 1 48%;
+		display: flex;
+		flex-direction: column;
+		gap: 8px
+	}
+
+	.form-questions__label {}
+
+	.label {
+		display: inline-block;
+		color: #424551;
+	}
+
+	.form-questions__input {
+		color: #9A9CA5;
+		background: #FFFFFF;
+		border: 1px solid #D7DADD;
+		border-radius: 4px;
+		padding: 13px 16px;
+		transition: all 0.3s ease 0s;
+	}
+
+	.form-questions__input:hover {
+		border: 1px solid #FF3F3A;
+	}
+
+	.form-questions__message {
+		flex: 1 1 48%;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.form-questions__textarea {
+		border: 1px solid #D7DADD;
+		width: 100%;
+		padding: 13px 16px;
+		display: inline-block;
+		min-height: 128px;
+		resize: none;
+		color: #1E212C;
+		transition: all 0.3s ease 0s;
+	}
+
+	.form-questions__textarea:hover {
+		border: 1px solid #FF3F3A;
+	}
+
+	.form-questions__footer {}
+
+	.footer-form {
+		display: flex;
+		align-items: center;
+		column-gap: 50px;
+	}
+
+	.footer-form__check {
+		flex: 0 1 45%;
+		display: flex;
+		position: relative;
+	}
+
+	.footer-form__checkbox {
+		position: absolute;
+		width: 0;
+		height: 0;
+		opacity: 0;
+	}
+
+	.footer-form__checkbox:checked+.footer-form__label::before {
+		background: #FF3F3A url('img/questions/check.svg') center / 70% no-repeat;
+	}
+
+	.footer-form__label {
+		cursor: pointer;
+		display: inline-flex;
+		gap: 10px;
+	}
+
+	.footer-form__label::before {
+		content: '';
+		flex: 0 0 16px;
+		width: 16px;
+		height: 16px;
+		border: 1px solid #dcd7d6;
+		border-radius: 3px;
+		transform: translate(0, 38%);
+	}
+
+	.footer-form__button {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 1.25;
+		text-align: center;
+		letter-spacing: 0.5px;
+		color: #FFFFFF;
+		background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+		border-radius: 4px;
+		padding: 16px 40px;
+		transition: all 0.3s ease 0s;
+		flex: 0 1 50%;
+		display: inline-block;
+		align-items: center;
+	}
+
+	.footer-form__button:hover {
+		background: linear-gradient(55.95deg, #ea231c 0%, #d75509 100%);
+	}
+
+	.homework {
+		padding: 100px 0px 100px 0px;
+	}
+
+	.homework__container {}
+
+	.homework__line {}
+
+	.homework__title {
+		font-size: 30px;
+		font-weight: 700;
+		margin-bottom: 15px;
+	}
+
+	.homework__radio {}
+
+	.radio-homework {}
+
+	.radio-homework:not(:last-child) {
+		margin-bottom: 7px;
+	}
+
+	.radio-homework_input {}
+
+	.radio-homework__label {
+		color: #424551;
+	}
+
+	.label {}
+
+	.homework__select {}
+
+	.homework__option {}
+</style>
+
+</html>
